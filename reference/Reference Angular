@@ -1,0 +1,71 @@
+NPM = Node Package Manager
+
+Environment steup:
+__________________
+Two steps to setup angular
+1. install NPM
+2. setup angular application
+
+What is the use of NPM in general?
+NPM --> installs libraries + packages + applications
+
+How to use NPM for angular setup?
+NPM installs angular libraries
+NPM executes scripts to transpiles our code & LAUNCH angular application
+
+where to go?
+www.npmjs.com
+
+This package has installed:
+	•	Node.js v8.9.4 to /usr/local/bin/node
+	•	npm v5.6.0 to /usr/local/bin/npm
+Make sure that /usr/local/bin is in your $PATH.
+
+Steps for setting up angular application
+_______________________________
+OPTION A 
+_______________________________
+1. create application folder
+2. add package def + configuration file
+3. install packages
+4. create the App's angular module
+5. create main.ts 
+6. create the HOST web page
+_______________________________
+OPTION B 
+_______________________________
+Angular CLI
+
+
+Meaning - Angular is modular?
+It has modules.
+@angular/ core
+@angular/ http
+@angular/ router
+@angular/ logging
+@angular/ forms
+@angular/ compiler
+@angular/ typescript
+@angular/ animations
+
+Where can I see angular modules?
+https://www.npmjs.com/~angular
+
+
+What is angular DECORATOR?
+It is similar to ANNOTATIONS in java. Looks like below:
+@Component({
+	selector: 'pm-root'
+	templte: '<div><h1>{{ pageTitle}}</h1></div>'
+})
+
+How to import a Component?
+import {Component} from '@angular/core';
+
+SPA
+- index.html is the main page of the application
+- this is the ONLY web page of the application
+- hence we call angular as SPA
+
+
+

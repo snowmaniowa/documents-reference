@@ -1,0 +1,10 @@
+spring
+/Users/santharaam/Documents/GitHub/spring
+
+
+//Enter this in terminal - this displays full path in Mac Finder
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true; killall Finder
+
+//Terminal = ZSH = Z-Shell
+//Plugin = Oh-my-ZSH
+
