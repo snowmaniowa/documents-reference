@@ -1,0 +1,19 @@
+
+
+Angular JS 2
+Typescript
+Karma
+
+JQuery
+Microservices
+Springboot
+Springcloud
+modular code development
+
+ test driven development both for UI (Karma, Jasmine) and Backend services (Junit, Mockito etc)
+ NoSQL DB (MongoDB, Redis etc.),
+ AWS, CDN cloud services
+ 
+  (Git repo, articles, open source contributions will be a huge plus)
+  
+  Experience with Scalr, RSpec, NewRelic, Splunk, Git, Artifactory, VictorOps

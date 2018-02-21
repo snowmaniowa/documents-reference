@@ -1,0 +1,27 @@
+Spring Tool Suite
+1. Install Tomcat 7.0		
+2. Install Maven
+3. Install Jersey. Run the Jersey archetype using Maven, provide group id, etc.,
+4. Import project> Maven> Import Maven Projects> 
+
+mvn archetype:generate -DarchetypeGroupId=org.glassfish.jersey.archetypes -DarchetypeArtifactId=jersey-quickstart-webapp -DarchetypeVersion=2.2
+
+Wizard
+
+Plural sight examples:
+http://localhost:8080/exercise-services/webapi/myresource
+http://localhost:8080/exercise-services/webapi/activities
+http://localhost:8080/exercise-services/webapi/activities/100
+http://localhost:8080/exercise-services/webapi/activities/200
+http://localhost:8080/exercise-services/webapi/activities/23762346
+
+Header>
+Key=Accept
+value=application/json
+value=application/xml
+
+GET = select / get operation
+POST = insert / create operation
+
+http://www.vogella.com/tutorials/REST/article.html
+

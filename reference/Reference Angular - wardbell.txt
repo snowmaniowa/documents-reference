@@ -1,0 +1,12 @@
+http://localhost:3000/
+https://github.com/wardbell/code-with-us-angular-quickstart
+
+
+ Visual Studio Code or Adam
+  TypeScript
+  https://code.visualstudio.com/docs?start=true
+  
+  Sublime / Atom / Vim
+ Gradle
+ 
+ https://ultimateangular.com/angular-pro

@@ -1,0 +1,201 @@
+Docker is configured to use the default machine with IP 192.168.99.100
+
+Docker CLIENT --> Docker ENGINE --> Buid/Manage IMAGES --> Run/Manage CONTAINERS
+
+1. setup docker machine  (using the docker-machine tool)
+2. setup/works with docker images and containers on  CLI (command line) using  docker client
+3. docker--client interacts with docker DAEMON ---> which is the engine that controls the access of the CONTAINERS
+4. docker--client will help us to work with images -- then convert them into "running" containers
+
+Key Commands aka Key Docker Client Commands --> 
+docker + enter
+
+** How to see all docker client commands *********************
+$ docker
+
+docker pull [image name]
+docker run [image name]
+docker images
+docker ps
+
+
+** How to see all docker-machine commands *****************
+$ docker-machine
+
+docker-machine ls
+docker-machine start [machine name]  or docker-machine start default
+docker-machine stop default
+docker-machine env
+
+================================================================
+docker-machine ls
+
+C:\dev\sandbox\docker>docker-machine ls
+NAME      ACTIVE  				 DRIVER       STATE     	URL                         						SWARM 	  DOCKER        ERRORS
+default   -        						virtualbox   Running   	tcp://192.168.99.100:2376     			      	v18.01.0-ce
+
+Machine name = default
+
+** How to start?
+C:\dev\sandbox\docker>docker-machine start default
+Starting "default"...
+Machine "default" is already running.
+
+** How to stop?
+C:\dev\sandbox\docker>docker-machine stop default
+Stopping "default"...
+Machine "default" was stopped.
+
+** How to start again? It will take some time - because it will backup.
+C:\dev\sandbox\docker>docker-machine start default
+Starting "default"...
+(default) Check network to re-create if needed...
+(default) Windows might ask for the permission to configure a dhcp server. Sometimes, such confirmation window is minimized in the taskbar.
+(default) Waiting for an IP...
+Machine "default" was started.
+Waiting for SSH to be available...
+Detecting the provisioner...
+Started machines may have new IP addresses. You may need to re-run the `docker-machine env` command.
+
+C:\dev\sandbox\docker>docker-machine env
+SET DOCKER_TLS_VERIFY=1
+SET DOCKER_HOST=tcp://192.168.99.100:2376
+SET DOCKER_CERT_PATH=C:\Users\santh\.docker\machine\machines\default
+SET DOCKER_MACHINE_NAME=default
+SET COMPOSE_CONVERT_WINDOWS_PATHS=true
+REM Run this command to configure your shell:
+REM     @FOR /f "tokens=*" %i IN ('docker-machine env') DO @%i
+
+**docker quickstart terminal ** (blue icon)
+
+                        ##         .
+                  ## ## ##        ==
+               ## ## ## ## ##    ===
+           /"""""""""""""""""\___/ ===
+      ~~~ {~~ ~~~~ ~~~ ~~~~ ~~~ ~ /  ===- ~~~
+           \______ o           __/
+             \    \         __/
+              \____\_______/
+
+docker is configured to use the default machine with IP 192.168.99.100
+For help getting started, check out the docs at https://docs.docker.com
+
+Start interactive shell
+
+** Give me the IP Address of the "default" machine
+santh@santha-yoga MINGW64 ~
+$ docker-machine ip default
+192.168.99.100
+
+** give me the status
+santh@santha-yoga MINGW64 ~
+$ docker-machine status default
+
+
+Running
+
+
+santh@santha-yoga MINGW64 ~
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+** How to change machine name?
+
+santh@santha-yoga MINGW64 ~
+$ docker-machine env default  (or) docker-machine env MyMachine2
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://192.168.99.100:2376"
+export DOCKER_CERT_PATH="C:\Users\santh\.docker\machine\machines\default"
+export DOCKER_MACHINE_NAME="default"
+export COMPOSE_CONVERT_WINDOWS_PATHS="true"
+# Run this command to configure your shell:
+# eval $("C:\Program Files\Docker Toolbox\docker-machine.exe" env default)
+
+** How to see all docker-machine commands
+$ docker-machine
+Usage: docker-machine.exe [OPTIONS] COMMAND [arg...]
+
+Create and manage machines running Docker.
+
+Version: 0.13.0, build 9ba6da9
+
+Author:
+  Docker Machine Contributors - <https://github.com/docker/machine>
+
+Options:
+  --debug, -D                                           Enable debug mode
+  --storage-path, -s "C:\Users\santh\.docker\machine"   Configures storage path [$MACHINE_STORAGE_PATH]
+  --tls-ca-cert                                         CA to verify remotes against [$MACHINE_TLS_CA_CERT]
+  --tls-ca-key                                          Private key to generate certificates [$MACHINE_TLS_CA_KEY]
+  --tls-client-cert                                     Client cert to use for TLS [$MACHINE_TLS_CLIENT_CERT]
+  --tls-client-key                                      Private key used in client TLS auth [$MACHINE_TLS_CLIENT_KEY]
+  --github-api-token                                    Token to use for requests to the Github API [$MACHINE_GITHUB_API_TOKEN]
+  --native-ssh                                          Use the native (Go-based) SSH implementation. [$MACHINE_NATIVE_SSH]
+  --bugsnag-api-token                                   BugSnag API token for crash reporting [$MACHINE_BUGSNAG_API_TOKEN]
+  --help, -h                                            show help
+  --version, -v                                         print the version
+
+Commands:
+  active                Print which machine is active
+  config                Print the connection config for machine
+  create                Create a machine
+  env                   Display the commands to set up the environment for the Docker client
+  inspect               Inspect information about a machine
+  ip                    Get the IP address of a machine
+  kill                  Kill a machine
+  ls                    List machines
+  provision             Re-provision existing machines
+  regenerate-certs      Regenerate TLS Certificates for a machine
+  restart               Restart a machine
+  rm                    Remove a machine
+  ssh                   Log into or run a command on a machine with SSH.
+  scp                   Copy files between machines
+  mount                 Mount or unmount a directory from a machine with SSHFS.
+  start                 Start a machine
+  status                Get the status of a machine
+  stop                  Stop a machine
+  upgrade               Upgrade a machine to the latest version of Docker
+  url                   Get the URL of a machine
+  version               Show the Docker Machine version or a machine docker version
+  help                  Shows a list of commands or help for one command
+
+Run 'docker-machine.exe COMMAND --help' for more information on a command.
+
+santh@santha-yoga MINGW64 ~
+$ docker run hello-world
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+	
+How to see the status of the container?
+santh@santha-yoga MINGW64 ~
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES
+6e2c249a61f2        hello-world         "/hello"            3 minutes ago       Exited (0) 3 minutes ago                       admiring_goodall
+
+** How to remove a docker container?
+santh@santha-yoga MINGW64 ~
+$ docker rm [container id]
+$ docker rm 6e  (partial container id)
+
+santh@santha-yoga MINGW64 ~
+$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+hello-world         latest              f2a91732366c        2 months ago        1.85kB
+
+** How to remove docker image?
+$ docker rmi [image id]
+$ docker rmi f2 (or partial image id)
+
+kitematic/hello-world
+	
+

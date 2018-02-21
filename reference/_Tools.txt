@@ -1,0 +1,58 @@
+
+SwaggerAPI
+Angular - w3 
+Todd Motto - Angular 2
+
+----------------------------------
+REST Spring Boot 
+REST Jersey *
+Swagger - documentation
+SwaggerHub
+Postman
+
+Spring MVC
+Spring Boot
+Spring JPA
+
+Cucumber (understands Gherkin)
+JBehave						http://jbehave.org/reference/stable/running-examples.html
+
+Angular JS = Angular 1.x *
+Angular (Todd Motto - Angular 2)
+ReactJS 
+TypeScript 
+NodeJS *
+NPM (Node package manager) *
+Visual Studio Code
+Curl
+
+JQuery *
+
+Pivotal tc Server = Pivotal TomCat Server
+Spring ToolSuite *
+SOAP UI NG
+Fiddler
+
+SOAP Services:
+JAX-WS
+JAX-B
+JAX-RPC
+JAX-RS
+
+Hibernate
+JPA
+#NoSQL
+#MongoDB
+#BigData
+
+OAuth
+WS02
+
+Docker
+DockerHub
+
+
+
+
+
+Buzzwords

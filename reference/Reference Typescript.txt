@@ -1,0 +1,70 @@
+
+1. install npm
+
+2. get PROJECT-SEED
+
+3. install npm globally
+PS C:\dev\sandbox\typescript> npm install -g typescript
+C:\Users\santh\AppData\Roaming\npm\tsserver -> C:\Users\santh\AppData\Roaming\npm\node_modules\typescript\bin\tsserver
+C:\Users\santh\AppData\Roaming\npm\tsc -> C:\Users\santh\AppData\Roaming\npm\node_modules\typescript\bin\tsc
++ typescript@2.7.2
+updated 1 package in 1.286s
+
+Note:
+bin\tsc = typescript compiler
+
+4.  How to see tsc options?
+PS C:\dev\sandbox\typescript> tsc
+
+PS C:\dev\sandbox\typescript> tsc -version
+Version 2.7.2
+
+How to generate tsconfig.json?
+PS C:\dev\sandbox\typescript> tsc --init
+message TS6071: Successfully created a tsconfig.json file.
+
+ES5 = Ecma Script 5
+
+Open tsconfig.json and remove the commented lines. These are the compiler options.
+
+How to compile app.tsc?
+PS C:\dev\sandbox\typescript> tsc
+
+How to compile app.tsc and put it into a sub-folder? ex: dist/app.js is expected
+i) Option-A
+PS C:\dev\sandbox\typescript> tsc --outDir dist
+
+ii) Option-B
+Go to "tsconfig.json" and provide a PROPERTY "outDir" :  "dist" 
+Then run tsc without any parameters
+PS C:\dev\sandbox\typescript> tsc
+
+How to recompile automatically?
+PS C:\dev\sandbox\typescript> tsc --watch
+
+Now if you make any changes to app.tsc file, then it gets compiled automatically.
+However a better option is to setup a server and enable it to compile automatically (instead of watching)
+
+==Setup Web-Pack===
+
+Setup a webpack configuration file. 
+Manually create  "webpack.config.js"
+
+==Yarn install === (dependency manager)
+santh@santha-yoga MINGW64 /c/dev/sandbox
+$ yarn install
+yarn install v1.3.2
+
+==Install Windows Powershell==
+Do this first
+
+==Before -- Install chocolatey==
+PS C:\WINDOWS\system32> Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://c
+hocolatey.org/install.ps1'))
+
+==After-- Install chocolatey==
+PS C:\WINDOWS\system32> choco install yarn
+Chocolatey v0.10.8
+Installing the following packages:
+yarn
+

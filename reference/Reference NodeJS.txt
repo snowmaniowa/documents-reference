@@ -1,0 +1,96 @@
+Node JS
+-----------------------------------------------------------------------------------
+node.js uses javascript on server
+node.js can collect FORM data
+can do CRUD on db
+can READ/WRITE contents on files in a server
+node.js uses ANSYNC programming
+-----------------------------------------------------------------------------------
+Verify installation
+>npm version
+
+How to run the program?
+1) cd C:\dev\sandbox\nodejs> node myfirst.js
+2) Then open browser: http://localhost:8080/
+
+
+-----------------------------------------------------------------------------------
+What is NodeJS module?
+1) Consider modules to be the same as JavaScript libraries.
+2) A set of functions you want to include in your application.
+
+
+Node.js has a set of built-in modules which you can use without any further installation.
+
+
+VS Code - Intellisense symbol reference
+https://code.visualstudio.com/docs/editor/intellisense
+
+Module				Description
+--------------------------------------------------------------
+assert				Provides a set of assertion tests		
+buffer				To handle binary data
+child_process	To run a child process
+cluster				To split a single Node process into multiple processes
+crypto				To handle OpenSSL cryptographic functions
+dgram				Provides implementation of UDP datagram sockets
+dns						To do DNS lookups and name resolution functions
+domain	Deprecated. To handle unhandled errors
+events				To handle events
+fs							To handle the file system
+http					To make Node.js act as an HTTP server
+https					To make Node.js act as an HTTPS server.
+net						To create servers and clients
+os						Provides information about the operation system
+path					To handle file paths
+punycode	Deprecated. A character encoding scheme
+querystring		To handle URL query strings
+readline			To handle readable streams one line at the time
+stream				To handle streaming data
+string_decoder	To decode buffer objects into strings
+timers				To execute a function after a given number of milliseconds
+tls						To implement TLS and SSL protocols
+tty						Provides classes used by a text terminal
+url						To parse URL strings
+util						To access utility functions
+v8						To access information about V8 (the JavaScript engine)
+vm						To compile JavaScript code in a virtual machine
+zlib						To compress or decompress files
+
+-----------------------------------------------------------------------------------
+santh@santha-yoga MINGW64 /c/dev/sandbox
+$ git clone https://github.com/snowmaniowa/nodejs.git
+
+Where to download Node JS?
+https://nodejs.org/en/download/current/
+Windows Installer (.msi)> 64 bit
+
+Where to download VS Code (Visual Studio Code)?
+https://code.visualstudio.com/download
+Windows> 32 bit version
+
+Use HTTPS (Do not use ssh)
+git clone https://github.com/snowmaniowa/nodejs.git
+
+Try adding a file and pushing it.
+$ git add --all
+$ git commit -m 'Hello World Node JS..'
+$ git push origin master
+-----------------------------------------------------------------------------------
+What is NPM?
+NPM is a package manager for Node.js packages or modules if you like.
+
+How to download a package?
+npm install upper-case
+
+How to use a package?
+var uc = require('upper-case');
+
+
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+

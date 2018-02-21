@@ -1,0 +1,5 @@
+
+How to install maven?
+https://www.mkyong.com/maven/how-to-install-maven-in-windows/
+
+M2_HOME and MAVEN_HOME
